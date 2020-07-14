@@ -1,0 +1,31 @@
+plugins {
+	id 'java-library'
+    id 'eclipse'
+    id 'com.palantir.docker' version '0.22.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    zip64 true
+    archiveFileName = "docker-java.jar"
+    manifest {
+        attributes(
+            'Main-Class': 'demo.HelloArgs'
+        )
+    }
+}
+
+docker {
+    name 'docker-java:1'
+    dockerfile file('Dockerfile')
+    files jar.outputs, 'README.md'
+    copySpec.into("./image-files")
+    dependsOn tasks.jar
+}
+
+task cleanDockerOrphans(type:Exec) {
+  commandLine './rm-orphans.sh'
+}
