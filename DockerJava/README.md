@@ -14,7 +14,8 @@
 2. Open shell and change to DockerJava project root: **&lt;install-path&gt;/DockerDemo/DockerJava**
 3. Use Gradle Wrapper to build docker image by executing shell command:  
    `$ ./gradlew docker`
-4. Confirm that image built: ```
+4. Confirm that image built:
+```
 $ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 docker-java         1                   8b775a0b060c        12 seconds ago      188MB
