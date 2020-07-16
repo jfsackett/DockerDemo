@@ -8,6 +8,8 @@ repositories {
     mavenCentral()
 }
 
+defaultTasks 'clean', 'docker'
+
 jar {
     zip64 true
     archiveFileName = "docker-java.jar"
@@ -21,7 +23,7 @@ jar {
 docker {
     name 'docker-java:1'
     dockerfile file('Dockerfile')
-    files jar.outputs, 'README.md'
+    files tasks.jar.outputs, 'README.md'
     copySpec.into("./image-files")
     dependsOn tasks.jar
 }
