@@ -19,6 +19,7 @@
 $ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 docker-java         1                   8b775a0b060c        12 seconds ago      188MB
+alpine              latest              f70734b6a266        2 months ago        5.61MB
 ```
 
 Developer configurations with Gradle installed do not need wrapper: all commands same except use gradle (not gradlew).  
