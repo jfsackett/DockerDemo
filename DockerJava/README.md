@@ -28,12 +28,10 @@ You may also build image manually (after building jar with gradle):
 
 #### Execution Instructions
 These examples demonstrate various common operation needed by Java applications, including passing command line parameters and reading from files within the image and through binds.  
-- Execute default Java app (demo.HelloArgs) with default args:  
+- Execute Java app (demo.HelloArgs) with default args:  
 `docker run docker-java:1`  
-- Execute default Java app (demo.HelloArgs) with specfied args:  
-`docker run docker-java:1 User`  
-- Execute specified Java app (demo.HelloArgs) with specfied args:  
-`docker run docker-java:1 demo.HelloArgs Superuser`
+- Execute Java app (demo.HelloArgs) with specfied args:  
+`docker run docker-java:1 demo.HelloArgs User`
 - Execute Java app (demo.EchoFile) to show contents of file inside image:  
 `docker run docker-java:1 demo.EchoFile README.md`  
 - Execute Java app (demo.EchoFile) to show contents of Dockerfile using a bind mount:  
