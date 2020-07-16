@@ -36,4 +36,4 @@ These examples demonstrate various common operation needed by Java applications,
 - Execute Java app (demo.EchoFile) to show contents of file inside image:  
 `docker run docker-java:1 demo.EchoFile README.md`  
 - Execute Java app (demo.EchoFile) to show contents of Dockerfile using bind mounts:  
-`docker run --mount type=bind,source="$(pwd)",target=/usr/input,readonly docker-java:1 demo.EchoFile input/Dockerfile`  
+`docker run --mount type=bind,source="$(pwd)",target=/app/input,readonly docker-java:1 demo.EchoFile input/Dockerfile`  
